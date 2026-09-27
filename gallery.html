@@ -3,13 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farm Gallery</title>
+
+    <title>Gallery - Smart Irrigation</title>
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="layout.css">
+
+    <style>
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .gallery-container figure {
+            width: 300px;
+            text-align: center;
+        }
+
+        .gallery-container img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .gallery-container img:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-container figcaption {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            background-color: white;
+            width: 60%;
+            max-width: 600px;
+            margin: 10% auto;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .close {
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
+
 <header>
-    <h1>Farm Gallery</h1>
+    <h1>AI-Based Smart Irrigation Advisory System</h1>
     <p>Smart Irrigation using AI &amp; Sensor Technology</p>
 </header>
 
@@ -23,46 +87,144 @@
         <li><a href="plot-map.html">Farm Map</a></li>
         <li><a href="registration.html">Registration</a></li>
         <li><a href="weather.html">Weather</a></li>
-        <li><a href="media.html">Awareness</a></li>
+        <li><a href="media.html">Media</a></li>
     </ul>
 </nav>
 
-<main class="content single-page">
-    <h2>Smart Farm Conditions</h2>
+<main>
 
-    <div class="gallery">
+<section>
+
+    <h2>Smart Irrigation Gallery</h2>
+
+    <div class="gallery-container">
+
         <figure>
-            <a href="advisory.html">
-                <img src="images/healthy-crop.png" alt="Healthy Sugarcane Crop" title="Healthy Sugarcane Crop" width="300" height="200">
-            </a>
+            <img src="images/healthy-crop.png"
+                 alt="Healthy Sugarcane Crop"
+                 title="Click for details"
+                 width="300"
+                 height="200"
+                 onclick="showDetails('crop')">
+
             <figcaption>Healthy Sugarcane Crop</figcaption>
         </figure>
 
+
         <figure>
-            <a href="farm-info.html">
-                <img src="images/drip-irrigation.png" alt="Drip Irrigation System" title="Drip Irrigation System" width="300" height="200">
-            </a>
+            <img src="images/drip-irrigation.png"
+                 alt="Drip Irrigation System"
+                 title="Click for details"
+                 width="300"
+                 height="200"
+                 onclick="showDetails('drip')">
+
             <figcaption>Drip Irrigation System</figcaption>
         </figure>
 
+
         <figure>
-            <a href="advisory.html">
-                <img src="images/soil-sensor.png" alt="Soil Moisture Sensor" title="Soil Moisture Sensor" width="300" height="200">
-            </a>
+            <img src="images/soil-sensor.png"
+                 alt="Soil Moisture Sensor"
+                 title="Click for details"
+                 width="300"
+                 height="200"
+                 onclick="showDetails('sensor')">
+
             <figcaption>Soil Moisture Sensor</figcaption>
         </figure>
 
+
         <figure>
-            <a href="weather.html">
-                <img src="images/weather-station.png" alt="Weather Monitoring Station" title="Weather Monitoring Station" width="300" height="200">
-            </a>
+            <img src="images/weather-station.png"
+                 alt="Weather Monitoring Station"
+                 title="Click for details"
+                 width="300"
+                 height="200"
+                 onclick="showDetails('weather')">
+
             <figcaption>Weather Monitoring Station</figcaption>
         </figure>
+
     </div>
+
+</section>
+
 </main>
 
+
+<!-- Details Popup -->
+
+<div id="detailsModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeDetails()">&times;</span>
+
+        <h2 id="detailsTitle"></h2>
+
+        <p id="detailsText"></p>
+
+    </div>
+
+</div>
+
+
 <footer>
-    <p>&copy; 2026 Smart Irrigation Advisory System</p>
+    <p>&copy; 2026 AI-Based Smart Irrigation Advisory System</p>
 </footer>
+
+
+<script>
+
+function showDetails(type) {
+
+    let title = "";
+    let text = "";
+
+    if (type === "crop") {
+        title = "Healthy Sugarcane Crop";
+        text = "Healthy sugarcane crops require proper irrigation, soil nutrients and suitable weather conditions for good growth. Smart irrigation helps provide water according to the crop's actual requirement.";
+    }
+
+    else if (type === "drip") {
+        title = "Drip Irrigation System";
+        text = "Drip irrigation supplies water directly to the root zone of the crop. It reduces water wastage and helps maintain suitable soil moisture levels.";
+    }
+
+    else if (type === "sensor") {
+        title = "Soil Moisture Sensor";
+        text = "A soil moisture sensor measures the amount of moisture present in the soil. The reading can be used by the smart irrigation system to determine whether irrigation is required.";
+    }
+
+    else if (type === "weather") {
+        title = "Weather Monitoring Station";
+        text = "A weather monitoring station collects information such as temperature, humidity and rainfall. This information can be used along with soil moisture data to make better irrigation decisions.";
+    }
+
+    document.getElementById("detailsTitle").innerHTML = title;
+    document.getElementById("detailsText").innerHTML = text;
+
+    document.getElementById("detailsModal").style.display = "block";
+}
+
+
+function closeDetails() {
+    document.getElementById("detailsModal").style.display = "none";
+}
+
+
+window.onclick = function(event) {
+
+    let modal = document.getElementById("detailsModal");
+
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+
+}
+
+</script>
+
 </body>
 </html>
