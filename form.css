@@ -4,14 +4,14 @@ form {
 }
 
 fieldset {
-    border: 2px solid #86efac;
+    border: 2px solid #86d8ef;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
 }
 
 legend {
-    color: #166534;
+    color: #371665;
     font-weight: bold;
     padding: 0 8px;
 }
@@ -33,7 +33,7 @@ input, select {
 
 input:focus, select:focus {
     outline: none;
-    border: 2px solid #22c55e;
+    border: 2px solid #2248c5;
     background-color: #f0fdf4;
 }
 
@@ -42,14 +42,14 @@ button {
     margin: 5px;
     border: none;
     border-radius: 6px;
-    background-color: #166534;
+    background-color: #191665;
     color: white;
     cursor: pointer;
     font-size: 15px;
 }
 
 button:hover {
-    background-color: #22c55e;
+    background-color: #6122c5;
     color: #052e16;
 }
 
@@ -67,7 +67,7 @@ button:hover {
 }
 
 .success {
-    color: #15803d;
+    color: #153580;
     font-weight: bold;
     font-size: 18px;
 }

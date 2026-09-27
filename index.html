@@ -1,28 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Irrigation Advisory System</title>
+
+    <title>AI-Based Smart Irrigation Advisory System</title>
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="layout.css">
+
     <style>
-        header {
-            background-color: #14532d;
+        .gallery {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            border: 1px solid #d8e6d8;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .gallery figure {
+            flex: 1;
+            min-width: 200px;
+            margin: 0;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery figcaption {
+            padding: 8px;
+            color: #42176b;
+            font-size: 14px;
+        }
+
+        .gallery small {
+            color: #777;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .modal-content {
+            background-color: white;
+            width: 60%;
+            max-width: 600px;
+            margin: 12% auto;
             padding: 25px;
-            border: 3px solid #0f3d21;
-        }
-        header h1 {
-            color: white;
+            border-radius: 8px;
             text-align: center;
         }
-        header p {
-            color: #dcfce7;
-            text-align: center;
+
+        .close {
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
         }
     </style>
 </head>
+
 <body>
+
 <header>
     <h1>AI-Based Smart Irrigation Advisory System</h1>
     <p>Smart Irrigation using AI &amp; Sensor Technology</p>
@@ -34,7 +98,6 @@
         <li><a href="farm-info.html">Farm Info</a></li>
         <li><a href="advisory.html">Irrigation Advisory</a></li>
         <li><a href="irrigation-table.html">Irrigation Table</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
         <li><a href="plot-map.html">Farm Map</a></li>
         <li><a href="registration.html">Registration</a></li>
         <li><a href="weather.html">Weather</a></li>
@@ -42,49 +105,200 @@
     </ul>
 </nav>
 
-<main class="page-layout">
-    <aside class="sidebar">
-        <h2>Portal Modules</h2>
-        <ul>
-            <li><a href="farm-info.html">Farm Information</a></li>
-            <li><a href="advisory.html">AI Advisory</a></li>
-            <li><a href="weather.html">Weather Forecast</a></li>
-            <li><a href="registration.html">Farmer Registration</a></li>
-        </ul>
-    </aside>
+<main>
 
-    <section class="content">
-        <h2>Welcome to the Smart Irrigation Portal</h2>
-        <p>This portal provides sugarcane farmers with farm information, sensor data, weather details and irrigation recommendations.</p>
+    <section>
 
-        <div class="card-container">
-            <article class="card">
-                <h3>AI Irrigation Advisory</h3>
-                <p>Get irrigation recommendations based on soil moisture and weather conditions.</p>
-                <a href="advisory.html">View Advisory</a>
-            </article>
+        <h2>Welcome to the Smart Irrigation Advisory System</h2>
 
-            <article class="card">
-                <h3>Sensor Monitoring</h3>
-                <p>Monitor soil moisture, temperature, humidity and rainfall information.</p>
-                <a href="farm-info.html">View Sensors</a>
-            </article>
+        <article>
 
-            <article class="card">
-                <h3>Farmer Registration</h3>
-                <p>Register farm and farmer details for personalized irrigation advice.</p>
-                <a href="registration.html">Register Now</a>
-            </article>
-        </div>
+            <h3>About the System</h3>
 
-        <div class="offer-box">
-            <strong>Smart Farming Tip:</strong> Check soil moisture before starting irrigation.
-        </div>
+            <p>
+                The AI-Based Smart Irrigation Advisory System is designed
+                for efficient irrigation management in sugarcane farming.
+                It uses soil moisture sensor readings and weather
+                information to provide irrigation recommendations
+                to farmers.
+            </p>
+
+            <p>
+                The system helps farmers monitor important agricultural
+                conditions and make informed decisions about irrigation.
+                By considering soil moisture, temperature, humidity
+                and rainfall information, water can be managed more
+                efficiently.
+            </p>
+
+        </article>
+
+        <aside>
+
+            <h3>Quick Information</h3>
+
+            <p>
+                <strong>Project ID:</strong> KJS-AGR-01
+            </p>
+
+            <p>
+                <strong>AI Application:</strong> Agriculture
+            </p>
+
+            <p>
+                <strong>Crop:</strong> Sugarcane
+            </p>
+
+        </aside>
+
     </section>
+
+
+    <section>
+
+        <h2>Farm Gallery</h2>
+
+        <div class="gallery">
+
+            <figure>
+                <img src="images/healthy-crop.png"
+                     alt="Healthy Sugarcane Crop"
+                     title="Click for details"
+                     width="300"
+                     height="180"
+                     onclick="showDetails('crop')">
+
+                <figcaption>
+                    <strong>Healthy Sugarcane Crop</strong><br>
+                    <small>Click image to view details</small>
+                </figcaption>
+            </figure>
+
+
+            <figure>
+                <img src="images/drip-irrigation.png"
+                     alt="Drip Irrigation System"
+                     title="Click for details"
+                     width="300"
+                     height="180"
+                     onclick="showDetails('drip')">
+
+                <figcaption>
+                    <strong>Drip Irrigation System</strong><br>
+                    <small>Click image to view details</small>
+                </figcaption>
+            </figure>
+
+
+            <figure>
+                <img src="images/soil-sensor.png"
+                     alt="Soil Moisture Sensor"
+                     title="Click for details"
+                     width="300"
+                     height="180"
+                     onclick="showDetails('sensor')">
+
+                <figcaption>
+                    <strong>Soil Moisture Sensor</strong><br>
+                    <small>Click image to view details</small>
+                </figcaption>
+            </figure>
+
+
+            <figure>
+                <img src="images/weather-station.png"
+                     alt="Weather Monitoring Station"
+                     title="Click for details"
+                     width="300"
+                     height="180"
+                     onclick="showDetails('weather')">
+
+                <figcaption>
+                    <strong>Weather Monitoring Station</strong><br>
+                    <small>Click image to view details</small>
+                </figcaption>
+            </figure>
+
+        </div>
+
+    </section>
+
 </main>
 
+
+<div id="detailsModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeDetails()">&times;</span>
+
+        <h2 id="detailsTitle"></h2>
+
+        <p id="detailsText"></p>
+
+    </div>
+
+</div>
+
+
 <footer>
-    <p>&copy; 2026 AI-Based Smart Irrigation Advisory System | K. J. Somaiya School of Engineering</p>
+    <p>
+        &copy; 2026 AI-Based Smart Irrigation Advisory System
+        | K. J. Somaiya School of Engineering
+    </p>
 </footer>
+
+
+<script>
+
+function showDetails(type) {
+
+    let title = "";
+    let text = "";
+
+    if (type === "crop") {
+        title = "Healthy Sugarcane Crop";
+        text = "Healthy sugarcane crops require proper irrigation and suitable soil moisture for good growth. Smart irrigation helps provide water according to the crop's requirements.";
+    }
+
+    else if (type === "drip") {
+        title = "Drip Irrigation System";
+        text = "Drip irrigation supplies water directly to the root zone of the crop. It helps reduce water wastage and maintain suitable soil moisture levels.";
+    }
+
+    else if (type === "sensor") {
+        title = "Soil Moisture Sensor";
+        text = "A soil moisture sensor measures the amount of moisture present in the soil. These readings help determine whether irrigation is required.";
+    }
+
+    else if (type === "weather") {
+        title = "Weather Monitoring Station";
+        text = "A weather monitoring station collects information such as temperature, humidity and rainfall. This information can be considered when making irrigation decisions.";
+    }
+
+    document.getElementById("detailsTitle").innerHTML = title;
+    document.getElementById("detailsText").innerHTML = text;
+    document.getElementById("detailsModal").style.display = "block";
+}
+
+
+function closeDetails() {
+    document.getElementById("detailsModal").style.display = "none";
+}
+
+
+window.onclick = function(event) {
+
+    let modal = document.getElementById("detailsModal");
+
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+
+}
+
+</script>
+
 </body>
+
 </html>

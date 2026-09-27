@@ -10,11 +10,11 @@ body {
 }
 
 h1, h2, h3 {
-    color: #166534;
+    color: #341665;
 }
 
 header {
-    background-color: #14532d;
+    background-color: #201453;
     color: white;
     padding: 20px;
     text-align: center;
@@ -30,7 +30,7 @@ header p {
 }
 
 nav {
-    background-color: #166534;
+    background-color: #1d1665;
     padding: 0;
 }
 
@@ -53,13 +53,13 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #22c55e;
-    color: #052e16;
+    background-color: #2297c5;
+    color: #050f2e;
     text-decoration: underline;
 }
 
 footer {
-    background-color: #14532d;
+    background-color: #142253;
     color: white;
     text-align: center;
     padding: 15px;
@@ -157,7 +157,7 @@ footer {
     width: 300px;
     height: 200px;
     object-fit: cover;
-    border: 3px solid #166534;
+    border: 3px solid #191665;
     border-radius: 8px;
     transition: transform 0.3s;
 }
@@ -167,7 +167,7 @@ footer {
 }
 
 iframe {
-    border: 2px solid #166534;
+    border: 2px solid #163665;
     border-radius: 8px;
 }
 
