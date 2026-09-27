@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+<header>
+    <h1>Farmer Registration</h1>
+    <p>Smart Irrigation using AI &amp; Sensor Technology</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="farm-info.html">Farm Info</a></li>
+        <li><a href="advisory.html">Irrigation Advisory</a></li>
+        <li><a href="irrigation-table.html">Irrigation Table</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="plot-map.html">Farm Map</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="weather.html">Weather</a></li>
+        <li><a href="media.html">Awareness</a></li>
+    </ul>
+</nav>
+
+<main class="content single-page">
+    <form id="registrationForm" novalidate>
+        <fieldset>
+            <legend>Farmer Details</legend>
+
+            <label for="farmerName">Farmer Name</label>
+            <input type="text" id="farmerName" name="farmerName" placeholder="Enter farmer name" autofocus>
+            <span class="error" id="farmerNameError"></span>
+
+            <label for="mobile">Mobile Number</label>
+            <input type="text" id="mobile" name="mobile" placeholder="10-digit mobile number" maxlength="10">
+            <span class="error" id="mobileError"></span>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com">
+            <span class="error" id="emailError"></span>
+
+            <label for="village">Village</label>
+            <input type="text" id="village" name="village" placeholder="Enter village">
+            <span class="error" id="villageError"></span>
+        </fieldset>
+
+        <fieldset>
+            <legend>Farm Details</legend>
+
+            <label for="plotId">Plot ID</label>
+            <input type="text" id="plotId" name="plotId" placeholder="AGR-1234">
+            <span class="error" id="plotIdError"></span>
+
+            <label for="cropStage">Crop Stage</label>
+            <select id="cropStage" name="cropStage">
+                <option value="">Select Crop Stage</option>
+                <option value="Germination">Germination</option>
+                <option value="Tillering">Tillering</option>
+                <option value="Grand Growth">Grand Growth</option>
+                <option value="Maturity">Maturity</option>
+            </select>
+            <span class="error" id="cropStageError"></span>
+
+            <label for="soilType">Soil Type</label>
+            <select id="soilType" name="soilType">
+                <option value="">Select Soil Type</option>
+                <option value="Black Soil">Black Soil</option>
+                <option value="Red Soil">Red Soil</option>
+                <option value="Loamy Soil">Loamy Soil</option>
+                <option value="Sandy Soil">Sandy Soil</option>
+            </select>
+            <span class="error" id="soilTypeError"></span>
+
+            <label for="irrigationMethod">Irrigation Method</label>
+            <select id="irrigationMethod" name="irrigationMethod">
+                <option value="">Select Irrigation Method</option>
+                <option value="Drip">Drip</option>
+                <option value="Sprinkler">Sprinkler</option>
+                <option value="Flood">Flood</option>
+            </select>
+            <span class="error" id="irrigationMethodError"></span>
+
+            <label for="soilMoisture">Soil Moisture (%)</label>
+            <input type="number" id="soilMoisture" name="soilMoisture" min="0" max="100" placeholder="0 - 100">
+            <span class="error" id="soilMoistureError"></span>
+
+            <label for="registrationDate">Registration Date</label>
+            <input type="date" id="registrationDate" name="registrationDate">
+            <span class="error" id="registrationDateError"></span>
+
+            <label for="farmPhoto">Farm Photo</label>
+            <input type="file" id="farmPhoto" name="farmPhoto" accept="image/*">
+            <span class="error" id="farmPhotoError"></span>
+        </fieldset>
+
+        <button type="submit">Submit Registration</button>
+        <button type="reset">Reset</button>
+        <p id="successMessage" class="success"></p>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2026 Smart Irrigation Advisory System</p>
+</footer>
+
+<script src="validation.js"></script>
+</body>
+</html>

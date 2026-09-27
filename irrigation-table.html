@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irrigation Table</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+<header>
+    <h1>Soil Moisture &amp; Irrigation Table</h1>
+    <p>Smart Irrigation using AI &amp; Sensor Technology</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="farm-info.html">Farm Info</a></li>
+        <li><a href="advisory.html">Irrigation Advisory</a></li>
+        <li><a href="irrigation-table.html">Irrigation Table</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="plot-map.html">Farm Map</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="weather.html">Weather</a></li>
+        <li><a href="media.html">Awareness</a></li>
+    </ul>
+</nav>
+
+<main class="content single-page">
+    <table>
+        <caption>Current Irrigation Recommendations</caption>
+        <thead>
+            <tr>
+                <th>Plot ID</th>
+                <th>Farmer Name</th>
+                <th>Soil Moisture (%)</th>
+                <th>Weather</th>
+                <th>Irrigation Recommendation</th>
+                <th>Water Requirement</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AGR-1001</td>
+                <td>Ramesh Patil</td>
+                <td>28</td>
+                <td>Sunny</td>
+                <td>Immediate Irrigation</td>
+                <td>4500 L</td>
+            </tr>
+            <tr>
+                <td>AGR-1002</td>
+                <td>Sunita More</td>
+                <td>42</td>
+                <td>Cloudy</td>
+                <td>Monitor Soil Moisture</td>
+                <td>2500 L</td>
+            </tr>
+            <tr>
+                <td>AGR-1003</td>
+                <td>Ajay Shinde</td>
+                <td>61</td>
+                <td>Rain Expected</td>
+                <td>Postpone Irrigation</td>
+                <td>0 L</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">Total Water Requirement</td>
+                <td>7000 L</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <table class="summary-table">
+        <tr>
+            <th rowspan="2">Water Stress</th>
+            <td>Low</td>
+            <td>Medium</td>
+            <td>High</td>
+        </tr>
+        <tr>
+            <td>&gt; 50%</td>
+            <td>30% - 50%</td>
+            <td>&lt; 30%</td>
+        </tr>
+    </table>
+</main>
+
+<footer>
+    <p>&copy; 2026 Smart Irrigation Advisory System</p>
+</footer>
+</body>
+</html>

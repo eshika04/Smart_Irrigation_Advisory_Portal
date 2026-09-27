@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Plot Map</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+<header>
+    <h1>Farm Plot Navigation</h1>
+    <p>Smart Irrigation using AI &amp; Sensor Technology</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="farm-info.html">Farm Info</a></li>
+        <li><a href="advisory.html">Irrigation Advisory</a></li>
+        <li><a href="irrigation-table.html">Irrigation Table</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="plot-map.html">Farm Map</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="weather.html">Weather</a></li>
+        <li><a href="media.html">Awareness</a></li>
+    </ul>
+</nav>
+
+<main class="content single-page">
+    <h2>Farm Map</h2>
+    <p>Click a plot on the map to view its details.</p>
+
+    <img src="images/farm-map.png" alt="Farm Map showing Plot A, Plot B and Plot C"
+         usemap="#farmmap" width="700" height="450">
+
+    <map name="farmmap">
+        <area shape="rect" coords="50,80,300,250" href="plot-a.html" alt="Plot A" title="Plot A">
+        <area shape="rect" coords="350,80,650,250" href="plot-b.html" alt="Plot B" title="Plot B">
+        <area shape="rect" coords="180,280,520,420" href="plot-c.html" alt="Plot C" title="Plot C">
+    </map>
+</main>
+
+<footer>
+    <p>&copy; 2026 Smart Irrigation Advisory System</p>
+</footer>
+</body>
+</html>

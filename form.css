@@ -1,0 +1,73 @@
+form {
+    max-width: 800px;
+    margin: auto;
+}
+
+fieldset {
+    border: 2px solid #86efac;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    color: #166534;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #9ca3af;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border: 2px solid #22c55e;
+    background-color: #f0fdf4;
+}
+
+button {
+    padding: 12px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    background-color: #166534;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #22c55e;
+    color: #052e16;
+}
+
+.error {
+    display: block;
+    color: #dc2626;
+    font-size: 13px;
+    min-height: 18px;
+    margin-top: 3px;
+}
+
+.invalid {
+    border: 2px solid #dc2626 !important;
+    background-color: #fef2f2;
+}
+
+.success {
+    color: #15803d;
+    font-weight: bold;
+    font-size: 18px;
+}

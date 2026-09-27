@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irrigation Advisory</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="layout.css">
+    <script src="irrigation.js"></script>
+</head>
+<body>
+<header>
+    <h1>Irrigation Advisory</h1>
+    <p>Smart Irrigation using AI &amp; Sensor Technology</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="farm-info.html">Farm Info</a></li>
+        <li><a href="advisory.html">Irrigation Advisory</a></li>
+        <li><a href="irrigation-table.html">Irrigation Table</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="plot-map.html">Farm Map</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="weather.html">Weather</a></li>
+        <li><a href="media.html">Awareness</a></li>
+    </ul>
+</nav>
+
+<main class="content single-page">
+    <section class="advisory-box">
+        <h2>Today's Irrigation Recommendation</h2>
+        <p><strong>Plot ID:</strong> AGR-1001</p>
+        <p><strong>Farmer Name:</strong> Ramesh Patil</p>
+        <p><strong>Soil Moisture:</strong> <mark>28%</mark></p>
+        <p><strong>Recommended Irrigation Duration:</strong> <em>45 minutes</em></p>
+        <p><strong>Water Stress Level:</strong> <mark>High</mark></p>
+        <hr>
+        <p><small>Recommendation is based on current sensor readings and weather information.</small></p>
+    </section>
+
+    <section>
+        <h2>Quick Irrigation Calculator</h2>
+        <label for="moisture">Current Soil Moisture (%):</label>
+        <input type="number" id="moisture" min="0" max="100" value="28">
+        <button onclick="calculateWater()">Calculate Water Requirement</button>
+        <p id="waterResult"></p>
+    </section>
+
+    <section>
+        <h2>Sensor Readings</h2>
+        <button onclick="showSensorData()">Show Sensor Data</button>
+        <p id="sensorResult"></p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Smart Irrigation Advisory System</p>
+</footer>
+</body>
+</html>
