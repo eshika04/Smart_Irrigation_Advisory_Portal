@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const soilMoisture = document.getElementById("soilMoisture");
         const registrationDate = document.getElementById("registrationDate");
 
-        // Farmer name
         if (farmerName.value.trim() === "") {
             showError(farmerName, "farmerNameError", "Farmer name is required.");
             valid = false;
@@ -30,14 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
             showError(farmerName, "farmerNameError", "Name should contain alphabets and spaces only.");
             valid = false;
         }
-
-        // Mobile number
         if (!/^[6-9][0-9]{9}$/.test(mobile.value.trim())) {
             showError(mobile, "mobileError", "Enter a valid 10-digit Indian mobile number.");
             valid = false;
         }
 
-        // Email
         if (email.value.trim() === "") {
             showError(email, "emailError", "Email is required.");
             valid = false;
@@ -46,37 +42,32 @@ document.addEventListener("DOMContentLoaded", function () {
             valid = false;
         }
 
-        // Village
         if (village.value.trim() === "") {
             showError(village, "villageError", "Village is required.");
             valid = false;
         }
 
-        // Plot ID
         if (!/^AGR-[0-9]{4}$/.test(plotId.value.trim())) {
             showError(plotId, "plotIdError", "Plot ID must follow AGR-1234 format.");
             valid = false;
         }
 
-        // Crop stage
+   
         if (cropStage.value === "") {
             showError(cropStage, "cropStageError", "Please select a crop stage.");
             valid = false;
         }
 
-        // Soil type
         if (soilType.value === "") {
             showError(soilType, "soilTypeError", "Please select a soil type.");
             valid = false;
         }
 
-        // Irrigation method
         if (irrigationMethod.value === "") {
             showError(irrigationMethod, "irrigationMethodError", "Please select an irrigation method.");
             valid = false;
         }
 
-        // Soil moisture
         let moisture = Number(soilMoisture.value);
         if (soilMoisture.value === "") {
             showError(soilMoisture, "soilMoistureError", "Soil moisture is required.");
@@ -86,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
             valid = false;
         }
 
-        // Registration date
         if (registrationDate.value === "") {
             showError(registrationDate, "registrationDateError", "Registration date is required.");
             valid = false;
