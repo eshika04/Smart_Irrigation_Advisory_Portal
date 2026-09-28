@@ -1,4 +1,4 @@
-// Task 1: Calculate moisture deficit and water requirement
+
 function calculateWater() {
     let farmerName = "Ramesh Patil";
     let plotId = "AGR-1001";
@@ -20,7 +20,7 @@ function calculateWater() {
     }
 }
 
-// Task 2: Irrigation recommendation
+
 function irrigationRecommendation(soilMoisture, rainExpected, cropStage) {
     if (rainExpected) {
         return "Postpone Irrigation";
@@ -33,7 +33,7 @@ function irrigationRecommendation(soilMoisture, rainExpected, cropStage) {
     }
 }
 
-// Task 3: Sugarcane farm object
+
 let sugarcaneFarm = {
     farmerName: "Ramesh Patil",
     plotId: "AGR-1001",
@@ -56,7 +56,7 @@ let sugarcaneFarm = {
     }
 };
 
-// Task 4: Sensor readings array
+
 let sensorReadings = [28, 31, 35, 42, 39, 27, 25];
 
 function showSensorData() {
@@ -74,7 +74,6 @@ function showSensorData() {
         "Readings below 30%: " + criticalCount;
 }
 
-// Example:
 console.log(irrigationRecommendation(28, false, "Grand Growth"));
 console.log(sugarcaneFarm.displayFarmInfo());
 console.log("Irrigation required:", sugarcaneFarm.checkIrrigationRequirement());
